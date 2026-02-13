@@ -9,3 +9,9 @@ might be a useful first approximation.
 
 I also wanted to introduce the latest and greatest random number geenrator, xorshiro.
 Well, no, maybe later.
+
+# Programs
+
+# polyg0.c
+Will make a polygon with 5 up to 10 sides. Follows an intuitive style of drawing whereby one side
+is set to be the horizontal base nad drawing proceeds anticlockwise.

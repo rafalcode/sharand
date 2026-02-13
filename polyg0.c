@@ -38,13 +38,13 @@ void hx(cairo_surface_t *surface, cairo_t *cr, float norad, float x0, float y0, 
 int main (int argc, char *argv[])
 {
 	if(argc!=2) {
-		printf("Usage: 1 arg, integer. Furthermore only 5 to 10.\n");
+		printf("Usage: 1 arg, integer. Furthermore only 5 to 16.\n");
 		exit(EXIT_FAILURE);
 	}
 
     int nsides=atoi(argv[1]);
-    if((nsides<5) | (nsides>10)) {
-        printf("Only 5 to 10 sides allowed.\n");
+    if((nsides<5) | (nsides>16)) {
+        printf("Only 5 to 16 sides allowed.\n");
 		exit(EXIT_FAILURE);
     }
 
