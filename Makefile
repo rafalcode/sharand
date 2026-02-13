@@ -4,7 +4,7 @@ SPECLIBS=-lcairo -lm
 CJPGLIBS=-lm -lcairo -lcairo_jpg -ljpeg # cairp +jpg libs
 SPECINC=-I/home/nutria/mylocal/include
 SPECINC2=-I/usr/include/cairo
-EXECUTABLES=ra0 ra2 linestar scall ls2 lsr2 lsr2f
+EXECUTABLES=ra0 ra2 linestar scall ls2 lsr2 lsr2f polyg0
 
 # ra2 and linestar taken from other repos.
 ra0: ra0.c
@@ -31,7 +31,10 @@ lsr2f: lsr2f.c
 	${CC} ${CFLAGS} -o $@ $^ ${SPECLIBS}
 # when you function-ify you nearly always 
 
-# by chance, my naive work on ls2 produced what looks like a scallop shell, by chance.
+# can generate 5 to 10 side polygons.
+polyg0: polyg0.c
+	${CC} ${CFLAGS} -o $@ $^ ${SPECLIBS}
+
 .PHONY: clean
 
 clean:
