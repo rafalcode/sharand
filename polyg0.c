@@ -26,7 +26,7 @@ void hx(cairo_surface_t *surface, cairo_t *cr, float norad, float x0, float y0, 
     cairo_move_to (cr, x0, y0);
     // intuition: flip the 30 (negativize sin() and rotate -100 (negativize cos() and switch cos and sin between x and y).
     // however in cairo convention, its +y is our -y, so reverse the y component (i.e. cos - now in y position - is not negativized.
-    cairo_rel_move_to(cr, -purad*sin(pid2), purad*cos(pid2));
+    cairo_rel_move_to(cr, -norad*sin(pid2), norad*cos(pid2)); // because previously I put purad here, all except hexagons were not centering properly.
 
     // now we follow intuition, drawing straight line first, for Cairo we must negate the y.
     for(int i=0;i<nsides-1;++i)
